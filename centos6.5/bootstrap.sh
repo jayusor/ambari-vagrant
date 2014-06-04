@@ -7,19 +7,18 @@ service ntpd start
 service iptables stop
 mkdir -p /root/.ssh; chmod 600 /root/.ssh; cp /home/vagrant/.ssh/authorized_keys /root/.ssh/
 
-sudo yum update -y 
+#sudo yum update -y 
+sudo yum install java-1.7.0-open* -y 
 sudo yum install R curl-devel wget -y
+R CMD javareconf
 
 sudo R -e 'update.packages(repo="http://cran.rstudio.com",ask=F)' 
-sudo R -e 'install.packages(c("data.table","devtools"),repo="http://cran.rstudio.com")'
+sudo R -e 'install.packages(c("data.table","devtools","rJava"),repo="http://cran.rstudio.com")'
 
 #sudo HADOOP_CMD=/usr/bin/hadoop
 #sudo export 
 echo 'HADOOP_CMD=/usr/bin/hadoop' >>  /etc/environment
 echo 'HADOOP_STREAMING=/usr/lib/hadoop-mapreduce/hadoop-streaming.jar' >>  /etc/environment
-
-
-
 
 
 
