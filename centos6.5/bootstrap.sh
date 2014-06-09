@@ -29,8 +29,8 @@ sudo ln -s /usr/local/bin/R /usr/bin/
 sudo R -e 'update.packages(repo="http://cran.rstudio.com",ask=F)' 
 sudo R -e 'install.packages(c("data.table","devtools","rJava"),repo="http://cran.rstudio.com")'
 
-echo 'HADOOP_CMD=/usr/bin/hadoop' >>  /etc/environment
-echo 'HADOOP_STREAMING=/usr/lib/hadoop-mapreduce/hadoop-streaming.jar' >>  /etc/environment
+sudo echo 'HADOOP_CMD=/usr/bin/hadoop' >>  sudo /etc/environment
+sudo echo 'HADOOP_STREAMING=/usr/lib/hadoop-mapreduce/hadoop-streaming.jar' >>  sudo /etc/environment
 
 
 #sudo R -e 'options(repos=structure(c(CRAN="http://cran.rstudio.com")));devtools::install_github("rmr2", "RevolutionAnalytics",subdir="pkg")'
