@@ -20,7 +20,7 @@ cd /opt/R-3.1.0
 sudo ./configure --enable-R-shlib  --with-x=no
 sudo make
 sudo make install
-
+sudo ln -s /usr/local/bin/R /usr/bin/
 
 
 #sudo yum install R curl-devel wget -y
