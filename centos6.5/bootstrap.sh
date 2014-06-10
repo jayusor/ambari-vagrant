@@ -10,7 +10,8 @@ mkdir -p /root/.ssh; chmod 600 /root/.ssh; cp /home/vagrant/.ssh/authorized_keys
 sudo yum update -y
 #sudo yum install java-1.7.0-open* -y
  
-sudo yum install java-1.7.0-open*  wget curl-devel readline-devel texlive texlive-latex texlive-texmf-fonts cairo-devel libtiff-devel libjpeg-devel -y 
+
+sudo yum install wget curl-devel readline-devel texlive texlive-latex texlive-texmf-fonts cairo-devel libtiff-devel libjpeg-devel -y 
 sudo yum groupinstall 'Development Tools' -y
 
 cd /opt/
@@ -22,18 +23,20 @@ sudo make
 sudo make install
 sudo ln -s /usr/local/bin/R /usr/bin/
 
-
+#export JAVA_HOME=/usr/jdk64/jdk1.7.0_45/bin
 #sudo yum install R curl-devel wget -y
 #R CMD javareconf
+#
+#sudo R -e 'update.packages(repo="http://cran.rstudio.com",ask=F)' 
+#sudo R -e 'install.packages(c("data.table","devtools","rJava"),repo="http://cran.rstudio.com")'
 
-sudo R -e 'update.packages(repo="http://cran.rstudio.com",ask=F)' 
-sudo R -e 'install.packages(c("data.table","devtools","rJava"),repo="http://cran.rstudio.com")'
-
-sudo echo 'HADOOP_CMD=/usr/bin/hadoop' >>  sudo /etc/environment
-sudo echo 'HADOOP_STREAMING=/usr/lib/hadoop-mapreduce/hadoop-streaming.jar' >>  sudo /etc/environment
+#sudo echo 'HADOOP_CMD=/usr/bin/hadoop' >>  /etc/environment
+#sudo echo 'HADOOP_STREAMING=/usr/lib/hadoop-mapreduce/hadoop-streaming.jar' >>  /etc/environment
 
 
 #sudo R -e 'options(repos=structure(c(CRAN="http://cran.rstudio.com")));devtools::install_github("rmr2", "RevolutionAnalytics",subdir="pkg")'
 #sudo R -e 'options(repos=structure(c(CRAN="http://cran.rstudio.com")));devtools::install_github("rhdfs", "RevolutionAnalytics",subdir="pkg")'
 #sudo R -e 'options(repos=structure(c(CRAN="http://cran.rstudio.com")));devtools::install_github("rhbase", "RevolutionAnalytics",subdir="pkg")'
 #sudo R -e 'options(repos=structure(c(CRAN="http://cran.rstudio.com")));devtools::install_github("plyrmr", "RevolutionAnalytics",subdir="pkg")'
+
+#/usr/jdk64/jdk1.7.0_45/
