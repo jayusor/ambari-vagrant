@@ -21,7 +21,7 @@ cd /opt/R-3.1.0
 sudo ./configure --enable-R-shlib  --with-x=no
 sudo make
 sudo make install
-sudo ln -s /usr/local/bin/R /usr/bin/
+sudo ln -s /usr/local/bin/* /usr/bin/
 
 #export JAVA_HOME=/usr/jdk64/jdk1.7.0_45/bin
 #sudo yum install R curl-devel wget -y
@@ -31,6 +31,7 @@ sudo ln -s /usr/local/bin/R /usr/bin/
 #sudo R -e 'install.packages(c("data.table","devtools","rJava"),repo="http://cran.rstudio.com")'
 
 #sudo echo 'HADOOP_CMD=/usr/bin/hadoop' >>  /etc/environment
+#sudo echo 'JAVA_HOME=/usr/jdk64/jdk1.7.0_45/bin' >>  /etc/environment
 #sudo echo 'HADOOP_STREAMING=/usr/lib/hadoop-mapreduce/hadoop-streaming.jar' >>  /etc/environment
 
 

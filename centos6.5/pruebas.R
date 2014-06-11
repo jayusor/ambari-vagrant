@@ -11,9 +11,7 @@ library(rhdfs)
 hdfs.init()
 
 ints = to.dfs(1:100)
-calc = mapreduce(input = ints,
-                 map = function(k, v) cbind(v, 2*v),
-                  )
+calc = mapreduce(input = ints,map = function(k, v) cbind(v, 2*v))
 
 from.dfs(calc)
 
