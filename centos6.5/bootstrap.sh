@@ -25,6 +25,6 @@ sudo ln -s /usr/local/bin/* /usr/bin/
 
 
 sudo echo 'HADOOP_CMD=/usr/bin/hadoop' >>  /etc/environment
-sudo echo 'JAVA_HOME=/usr/jdk64/jdk1.7.0_45/bin' >>  /etc/environment
+sudo echo 'JAVA_HOME=/usr/jdk64/jdk1.7.0_45' >>  /etc/environment
 sudo echo 'HADOOP_STREAMING=/usr/lib/hadoop-mapreduce/hadoop-streaming.jar' >>  /etc/environment
 
