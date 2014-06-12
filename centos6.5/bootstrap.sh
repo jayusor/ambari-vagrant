@@ -23,21 +23,8 @@ sudo make
 sudo make install
 sudo ln -s /usr/local/bin/* /usr/bin/
 
-#export JAVA_HOME=/usr/jdk64/jdk1.7.0_45/bin
-#sudo yum install R curl-devel wget -y
-#R CMD javareconf
-#
-#sudo R -e 'update.packages(repo="http://cran.rstudio.com",ask=F)' 
-#sudo R -e 'install.packages(c("data.table","devtools","rJava"),repo="http://cran.rstudio.com")'
 
-#sudo echo 'HADOOP_CMD=/usr/bin/hadoop' >>  /etc/environment
-#sudo echo 'JAVA_HOME=/usr/jdk64/jdk1.7.0_45/bin' >>  /etc/environment
-#sudo echo 'HADOOP_STREAMING=/usr/lib/hadoop-mapreduce/hadoop-streaming.jar' >>  /etc/environment
+sudo echo 'HADOOP_CMD=/usr/bin/hadoop' >>  /etc/environment
+sudo echo 'JAVA_HOME=/usr/jdk64/jdk1.7.0_45/bin' >>  /etc/environment
+sudo echo 'HADOOP_STREAMING=/usr/lib/hadoop-mapreduce/hadoop-streaming.jar' >>  /etc/environment
 
-
-#sudo R -e 'options(repos=structure(c(CRAN="http://cran.rstudio.com")));devtools::install_github("rmr2", "RevolutionAnalytics",subdir="pkg")'
-#sudo R -e 'options(repos=structure(c(CRAN="http://cran.rstudio.com")));devtools::install_github("rhdfs", "RevolutionAnalytics",subdir="pkg")'
-#sudo R -e 'options(repos=structure(c(CRAN="http://cran.rstudio.com")));devtools::install_github("rhbase", "RevolutionAnalytics",subdir="pkg")'
-#sudo R -e 'options(repos=structure(c(CRAN="http://cran.rstudio.com")));devtools::install_github("plyrmr", "RevolutionAnalytics",subdir="pkg")'
-
-#/usr/jdk64/jdk1.7.0_45/
