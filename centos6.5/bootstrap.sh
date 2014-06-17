@@ -21,8 +21,9 @@ cd /opt/R-3.1.0
 sudo ./configure --enable-R-shlib  --with-x=no
 sudo make
 sudo make install
-sudo ln -s /usr/local/bin/* /usr/bin/
-
+#sudo ln -s /usr/local/bin/* /usr/bin/
+echo 'pathmunge /usr/local/bin' > /etc/profile.d/R.sh
+echo 'pathmunge /usr/jdk64/jdk1.7.0_45/bin'  > /etc/profile.d/java.sh
 
 sudo echo 'HADOOP_CMD=/usr/bin/hadoop' >>  /etc/environment
 sudo echo 'JAVA_HOME=/usr/jdk64/jdk1.7.0_45' >>  /etc/environment
