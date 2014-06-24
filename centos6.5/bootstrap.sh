@@ -11,17 +11,18 @@ sudo yum update -y
 #sudo yum install java-1.7.0-open* -y
  
 
-sudo yum install wget curl-devel readline-devel texlive texlive-latex texlive-texmf-fonts cairo-devel libtiff-devel libjpeg-devel -y 
+sudo yum install wget 
+# curl-devel readline-devel texlive texlive-latex texlive-texmf-fonts cairo-devel libtiff-devel libjpeg-devel -y 
 sudo yum groupinstall 'Development Tools' -y
 
-cd /opt/
-sudo wget http://cran.r-project.org/src/base/R-3/R-3.1.0.tar.gz
-sudo tar -xzvf R-3.1.0.tar.gz 
-cd /opt/R-3.1.0
-sudo ./configure --enable-R-shlib  --with-x=no
-sudo make
-sudo make install
-#sudo ln -s /usr/local/bin/* /usr/bin/
+#cd /opt/
+#sudo wget http://cran.r-project.org/src/base/R-3/R-3.1.0.tar.gz
+#sudo tar -xzvf R-3.1.0.tar.gz 
+#cd /opt/R-3.1.0
+#sudo ./configure --enable-R-shlib  --with-x=no
+#sudo make
+#sudo make install
+
 echo 'pathmunge /usr/local/bin' > /etc/profile.d/R.sh
 #echo 'pathmunge /usr/jdk64/jdk1.7.0_45/bin'  > /etc/profile.d/java.sh
 
