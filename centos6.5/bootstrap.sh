@@ -11,7 +11,7 @@ sudo yum update -y
 #sudo yum install java-1.7.0-open* -y
  
 
-sudo yum install wget R -y
+sudo yum install wget R libcurl libcurl-devel -y
 # curl-devel readline-devel texlive texlive-latex texlive-texmf-fonts cairo-devel libtiff-devel libjpeg-devel -y 
 sudo yum groupinstall 'Development Tools' -y
 
@@ -46,7 +46,7 @@ sudo alternatives --set jar /usr/java/jdk1.7.0_51/bin/jar
 #echo 'pathmunge /usr/jdk64/jdk1.7.0_45/bin'  > /etc/profile.d/java.sh
 
 sudo echo 'HADOOP_CMD=/usr/bin/hadoop' >>  /etc/environment
-sudo echo 'JAVA_HOME=/java/jdk1.7.0_51' >>  /etc/environment
+sudo echo 'JAVA_HOME=/usr/java/jdk1.7.0_51' >>  /etc/environment
 sudo echo 'HADOOP_STREAMING=/usr/lib/hadoop-mapreduce/hadoop-streaming.jar' >>  /etc/environment
 
 
