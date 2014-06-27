@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
 cd /opt/
-wget http://apache.rediris.es/spark/spark-1.0.0/spark-1.0.0-bin-hadoop2.tgz
+cp /vagrant/spark-1.0.0-bin-hadoop2.tgz .
 tar -xzvf spark-1.0.0-bin-hadoop2.tgz
-hadoop fs -put spark-1.0.0-bin-hadoop2.tgz /tmp/
 rm spark-1.0.0-bin-hadoop2.tgz
 
 sudo echo 'HADOOP_CONF_DIR=/etc/hadoop/conf' >>  /etc/environment
